@@ -22,11 +22,7 @@ namespace TestApp
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            /*config.Routes.MapHttpRoute(
-            "Register",                                              // Route name 
-            "{controller}/{action}/{name}",                           // URL with parameters 
-            new { controller = "Customer", action = "GetCustomer", name = "" }  // Parameter defaults
-            );*/
+           
             config.Routes.MapHttpRoute(
             "Register",                                              // Route name 
             "{controller}/{action}/{fname}/{lname}/{email}/{pswrd}",                           // URL with parameters 
@@ -35,7 +31,7 @@ namespace TestApp
             config.Routes.MapHttpRoute(
             "Login",                                              // Route name 
             "{controller}/{action}/{email}/{pswrd}",                           // URL with parameters 
-            new { controller = "Customer", action = "Login", email = "", pswrd = "" }  // Parameter defaults
+            new { controller = "Customer", action = "PostLogin", email = "" , pswrd ="" }  // Parameter defaults
             );
         }
     }
