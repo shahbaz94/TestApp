@@ -19,16 +19,16 @@
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
-    var uri = 'Customer/PostLogin';
+  //  var uri = 'Customer/Login';
 
     function find() {
        // var fname = $('#fname').val();
        // var lname = $('#lname').val();
         var email = $('#email').val();
         var pswrd = $('#pswrd').val();
-        console.log(email);
-        console.log(pswrd);
-      $.post(uri + '/' + email +'/' + pswrd)
+       // console.log(email);
+        //console.log(pswrd);
+        $.post('Login/Login', { "": $('#email').val() , "": $('#pswrd').val() })
           .done(function (data) {
             $('#product').text(data);
           })
