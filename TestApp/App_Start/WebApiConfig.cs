@@ -25,8 +25,8 @@ namespace TestApp
            
             config.Routes.MapHttpRoute(
             "Register",                                              // Route name 
-            "{controller}/{action}/{fname}/{lname}/{email}/{pswrd}",                           // URL with parameters 
-            new { controller = "Customer", action = "Register", fname = "",lname = "", email = "", pswrd = "" }  // Parameter defaults
+            "{controller}/{action}",                           // URL with parameters 
+            new { controller = "Customer", action = "Register" }  // Parameter defaults
             );
             config.Routes.MapHttpRoute(
             "Login",                                              // Route name 
